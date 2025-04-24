@@ -1,0 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    max-width: 100%;
+    margin: 0 auto;
+}

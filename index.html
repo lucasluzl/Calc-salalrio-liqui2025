@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salário Líquido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">Calculadora de Salário Líquido - 2025</h2>
+                
+                <form id="salarioForm">
+                    <div class="mb-3">
+                        <label for="salario" class="form-label">Salário Bruto (R$)</label>
+                        <input type="number" class="form-control" id="salario" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dependentes" class="form-label">Número de Dependentes</label>
+                        <input type="number" class="form-control" id="dependentes" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Calcular</button>
+                </form>
+
+               
+
+            
+                <div class="mt-4" id="resultado" style="display: none;">
+                    <h4>Resultados</h4>
+                    <p><strong>INSS:</strong> R$ <span id="inss"></span></p>
+                    <p><strong>Imposto de Renda:</strong> R$ <span id="irrf"></span></p>
+                    <p><strong>Salário Líquido:</strong> R$ <span id="liquido"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     <div class="mt-5">
+        <h4>Tabela INSS 2025</h4>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Faixa Salarial (R$)</th>
+                    <th>Alíquota (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Até 1.518,00</td><td>7,5%</td></tr>
+                <tr><td>1.518,01 a 2.793,88</td><td>9%</td></tr>
+                <tr><td>2.793,89 a 4.190,83</td><td>12%</td></tr>
+                <tr><td>4.190,84 a 8.157,41</td><td>14%</td></tr>
+                <tr><td>Acima de 8.157,41</td><td>Teto R$ 951,62</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <div class="mt-4">
+        <h4>Tabela Imposto de Renda 2025</h4>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Base de Cálculo (R$)</th>
+                    <th>Alíquota (%)</th>
+                    <th>Deduzir (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Até 2.259,20</td><td>Isento</td><td>-</td></tr>
+                <tr><td>2.259,21 a 2.826,65</td><td>7,5%</td><td>169,44</td></tr>
+                <tr><td>2.826,66 a 3.751,05</td><td>15%</td><td>381,44</td></tr>
+                <tr><td>3.751,06 a 4.664,68</td><td>22,5%</td><td>662,77</td></tr>
+                <tr><td>Acima de 4.664,68</td><td>27,5%</td><td>896,00</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
